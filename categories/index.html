@@ -130,12 +130,26 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/medias/musics/music1.mp3" class="waves-effect waves-light">
+    <a href="" class="waves-effect waves-light">
+
       
-      <i class="fas fa-music" style="zoom: 0.6;"></i>
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
       
-      <span>Musics</span>
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/medias/musics/music1.mp3">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Musics</span>
+        </a>
+      </li>
+      
+    </ul>
     
   </li>
   
@@ -244,12 +258,26 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/medias/musics/music1.mp3" class="waves-effect waves-light">
+		<a href="javascript:;">
 			
-			    <i class="fa-fw fas fa-music"></i>
+				<i class="fa-fw fas fa-list"></i>
 			
-			Musics
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/medias/musics/music1.mp3 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Musics</span>
+                  </a>
+                </li>
+              
+            </ul>
           
         </li>
         
@@ -345,7 +373,7 @@
                 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
                 <script>
                     var typed = new Typed("#subtitle", {
-                        strings: ['读书、理解、思考，从生活、历史多角度反复印证，直到“道“融入血液，做到本该如此做。','从来没有真正的绝境, 只有心灵的迷途。'],
+                        strings: ['读书、理解、思考，从生活、历史多角度反复印证，直到“道“融入血液，做到本该如此做。','万事无如退步人，孤云野鹤自由身；松风十里时来往，笑揖峰头月一轮。'],
                         startDelay: 300,
                         typeSpeed: 100,
                         loop: true,
@@ -362,7 +390,7 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    var bannerUrl = "/medias/banner/" +(new Date().getHours()%8) /*(new Date().getDay() + 3)*/ + '.jpg';
     $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
@@ -396,60 +424,6 @@
 
 
     <footer class="page-footer bg-color">
-    
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
     
     <div class="container row center-align" style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
