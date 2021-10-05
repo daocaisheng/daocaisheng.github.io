@@ -242,6 +242,7 @@ mark {
 
 .bg-color {
     background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+	
 }
 
 .text-color {
@@ -574,7 +575,7 @@ header .go-back i {
 }
 
 .bg-cover .title {
-    font-size: 4rem;
+    font-size: 3rem;/*4rem*/
     line-height: 1.2em;
     margin-bottom: 20px;
     position: relative;
