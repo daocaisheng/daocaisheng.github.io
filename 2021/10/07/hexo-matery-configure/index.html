@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo_matery_configure 记录, cyf">
+    <meta name="keywords" content="hexo_matery_configure 记录, 十八画生">
     <meta name="description" content="读书、理解、思考，从生活、历史多角度反复印证，直到“道“融入血液，做到本该如此做。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hexo_matery_configure 记录 | cyf</title>
+    <title>hexo_matery_configure 记录 | 十八画生</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -43,7 +43,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">cyf</span>
+                    <span class="logo-span">十八画生</span>
                 </a>
             </div>
             
@@ -89,15 +89,6 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/gallery" class="waves-effect waves-light">
-      
-      <span>相册</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
     <a href="/about" class="waves-effect waves-light">
       
       <span>关于</span>
@@ -111,6 +102,27 @@
       
       <span>友情链接</span>
     </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <span>清单</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/gallery">
+          
+          <span>相册</span>
+        </a>
+      </li>
+      
+    </ul>
     
   </li>
   
@@ -128,7 +140,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">cyf</div>
+        <div class="logo-name">十八画生</div>
         <div class="logo-desc">
             
             读书、理解、思考，从生活、历史多角度反复印证，直到“道“融入血液，做到本该如此做。
@@ -186,17 +198,6 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/gallery" class="waves-effect waves-light">
-			
-				<i class="fas fa-fw fa-link"></i>
-			
-			Gallery
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
 		<a href="/about" class="waves-effect waves-light">
 			
 				<i class="fas fa-fw fa-link"></i>
@@ -214,6 +215,29 @@
 			
 			友情链接
 		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fas fa-fw fa-link"></i>
+			
+			清单
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/gallery " style="margin-left:75px">
+				  
+		          <span>相册</span>
+                  </a>
+                </li>
+              
+            </ul>
           
         </li>
         
@@ -460,9 +484,24 @@
                 
 
                 
-
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-10-07
+                </div>
                 
 
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    224
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    1 分
+                </div>
                 
 
                 
@@ -494,6 +533,16 @@ summary:
 password: f242ac52b603121f3d86906819b519a64567864b296797cf15f3a1342c1e8717
 img: img: /medias/featureimages/1.jpg
 ---
+</code></pre>
+<h2 id="3、-安装文章字数统计插件"><a href="#3、-安装文章字数统计插件" class="headerlink" title="3、 安装文章字数统计插件"></a>3、 安装文章字数统计插件</h2><h3 id="3-1、安装命令如下"><a href="#3-1、安装命令如下" class="headerlink" title="3.1、安装命令如下"></a>3.1、安装命令如下</h3><pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> i --save hexo-wordcount
+</code></pre>
+<h3 id="3-2、在主题下的-config-yml-文件中将各个文章字数相关的配置激活"><a href="#3-2、在主题下的-config-yml-文件中将各个文章字数相关的配置激活" class="headerlink" title="3.2、在主题下的 _config.yml 文件中将各个文章字数相关的配置激活"></a>3.2、在主题下的 <code>_config.yml</code> 文件中将各个文章字数相关的配置激活</h3><pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">postInfo</span><span class="token punctuation">:</span>
+  <span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 发布日期</span>
+  <span class="token key atrule">update</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 更新日期</span>
+  <span class="token key atrule">wordCount</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 文章字数统计</span>
+  <span class="token key atrule">totalCount</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment" spellcheck="true"># 站点总文章字数</span>
+  <span class="token key atrule">min2read</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 文章阅读时长</span>
+  <span class="token key atrule">readCount</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment" spellcheck="true"># 文章阅读次数</span>
 </code></pre>
 <p><br/>结束</br></p>
 <pre class=" language-bash"><code class="language-bash">这里有光影流年，还有两朵穿衣裳的云，相拥在明天的河岸。
@@ -733,47 +782,45 @@ img: img: /medias/featureimages/1.jpg
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/10/07/hexo-matery-configure/">
+                <a href="/2021/10/07/test-blog/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="hexo_matery_configure 记录">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="test_blog">
                         
-                        <span class="card-title">hexo_matery_configure 记录</span>
+                        <span class="card-title">test_blog</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            matery 主题各种配置记录
+                            这是一个测试博客
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-07
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-07
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" class="post-category">
-                                    碎碎念
+                            <a href="/categories/none/" class="post-category">
+                                    none
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/matery/">
-                        <span class="chip bg-color">matery</span>
+                    <a href="/tags/none/">
+                        <span class="chip bg-color">none</span>
                     </a>
                     
                 </div>
