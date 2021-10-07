@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>hexo_matery_configure 记录</title>
+      <link href="/2021/10/07/hexo-matery-configure/"/>
+      <url>/2021/10/07/hexo-matery-configure/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1、新增menu-》Gallery显示中文"><a href="#1、新增menu-》Gallery显示中文" class="headerlink" title="1、新增menu-》Gallery显示中文"></a>1、新增menu-》Gallery显示中文</h2><pre class=" language-bash"><code class="language-bash">1、站点文件_config.yml中menu下增加  Gallery:    url: /gallery2、主题下面的languages文件夹-》zh-CN.yml文件中增加   gallery: 相册3、文件./layout/_partial/navigation.ejs中增加   menuMap.set<span class="token punctuation">(</span><span class="token string">"Gallery"</span>, <span class="token string">"相册"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><h2 id="2、配置hexo-new-xxx-时默认产生的头部信息"><a href="#2、配置hexo-new-xxx-时默认产生的头部信息" class="headerlink" title="2、配置hexo new xxx 时默认产生的头部信息"></a>2、配置hexo new xxx 时默认产生的头部信息</h2><pre class=" language-bash"><code class="language-bash">1、站点文件 ./scaffolds/post.md 中添加相关配置---<span class="token punctuation">..</span>.author: cyftags:categories:summary:password: f242ac52b603121f3d86906819b519a64567864b296797cf15f3a1342c1e8717img: img: /medias/featureimages/1.jpg---</code></pre><p><br/>结束</br></p><pre class=" language-bash"><code class="language-bash">这里有光影流年，还有两朵穿衣裳的云，相拥在明天的河岸。</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 碎碎念 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> matery </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>技术面试必备基础知识、Leetcode、计算机操作系统、计算机网络、系统设计</title>
       <link href="/2021/09/28/linux/"/>
       <url>/2021/09/28/linux/</url>

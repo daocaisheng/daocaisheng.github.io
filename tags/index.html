@@ -55,8 +55,6 @@
     
     <a href="/" class="waves-effect waves-light">
       
-      <i class="fas fa-home" style="zoom: 0.6;"></i>
-      
       <span>首页</span>
     </a>
     
@@ -65,8 +63,6 @@
   <li class="hide-on-med-and-down nav-item">
     
     <a href="/tags" class="waves-effect waves-light">
-      
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
       
       <span>标签</span>
     </a>
@@ -77,8 +73,6 @@
     
     <a href="/categories" class="waves-effect waves-light">
       
-      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
-      
       <span>分类</span>
     </a>
     
@@ -88,8 +82,6 @@
     
     <a href="/archives" class="waves-effect waves-light">
       
-      <i class="fas fa-archive" style="zoom: 0.6;"></i>
-      
       <span>归档</span>
     </a>
     
@@ -97,9 +89,16 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/about" class="waves-effect waves-light">
+    <a href="/gallery" class="waves-effect waves-light">
       
-      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      <span>相册</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
       
       <span>关于</span>
     </a>
@@ -109,8 +108,6 @@
   <li class="hide-on-med-and-down nav-item">
     
     <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
       
       <span>友情链接</span>
     </a>
@@ -147,7 +144,7 @@
 	  
 		<a href="/" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-home"></i>
+				<i class="fas fa-fw fa-link"></i>
 			
 			首页
 		</a>
@@ -158,7 +155,7 @@
 	  
 		<a href="/tags" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-tags"></i>
+				<i class="fas fa-fw fa-link"></i>
 			
 			标签
 		</a>
@@ -169,7 +166,7 @@
 	  
 		<a href="/categories" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-bookmark"></i>
+				<i class="fas fa-fw fa-link"></i>
 			
 			分类
 		</a>
@@ -180,7 +177,7 @@
 	  
 		<a href="/archives" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-archive"></i>
+				<i class="fas fa-fw fa-link"></i>
 			
 			归档
 		</a>
@@ -189,9 +186,20 @@
         
         <li class="m-nav-item">
 	  
+		<a href="/gallery" class="waves-effect waves-light">
+			
+				<i class="fas fa-fw fa-link"></i>
+			
+			Gallery
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
 		<a href="/about" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-user-circle"></i>
+				<i class="fas fa-fw fa-link"></i>
 			
 			关于
 		</a>
@@ -202,7 +210,7 @@
 	  
 		<a href="/friends" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-address-book"></i>
+				<i class="fas fa-fw fa-link"></i>
 			
 			友情链接
 		</a>
@@ -365,6 +373,15 @@
                     </span>
                 </a>
                 
+                
+                <a href="/tags/matery/" title="matery: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="matery" style="background-color: #E8F8F5;">matery
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
             </div>
         </div>
     </div>
@@ -389,7 +406,7 @@
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"linux","weight":2,"link":"/tags/linux/"},{"text":"操作系统","weight":2,"link":"/tags/操作系统/"},{"text":"算法","weight":2,"link":"/tags/算法/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"linux","weight":2,"link":"/tags/linux/"},{"text":"操作系统","weight":2,"link":"/tags/操作系统/"},{"text":"算法","weight":2,"link":"/tags/算法/"},{"text":"matery","weight":1,"link":"/tags/matery/"}], {
         autoResize: true
     });
 </script>
