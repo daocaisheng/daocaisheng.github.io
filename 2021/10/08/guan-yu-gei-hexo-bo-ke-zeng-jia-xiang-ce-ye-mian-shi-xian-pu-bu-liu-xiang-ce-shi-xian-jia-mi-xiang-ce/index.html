@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="技术面试必备基础知识、Leetcode、计算机操作系统、计算机网络、系统设计, 十八画生">
+    <meta name="keywords" content="关于给hexo博客增加相册页面（实现瀑布流相册，实现加密相册）, 十八画生">
     <meta name="description" content="读书、理解、思考，从生活、历史多角度反复印证，直到“道“融入血液，做到本该如此做。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>技术面试必备基础知识、Leetcode、计算机操作系统、计算机网络、系统设计 | 十八画生</title>
+    <title>关于给hexo博客增加相册页面（实现瀑布流相册，实现加密相册） | 十八画生</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -333,12 +333,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/banner/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">技术面试必备基础知识、Leetcode、计算机操作系统、计算机网络、系统设计</h1>
+                    <h1 class="description center-align post-title">关于给hexo博客增加相册页面（实现瀑布流相册，实现加密相册）</h1>
                 </div>
             </div>
         </div>
@@ -454,16 +454,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/linux/">
-                                <span class="chip bg-color">linux</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
-                                <span class="chip bg-color">操作系统</span>
-                            </a>
-                        
-                            <a href="/tags/%E7%AE%97%E6%B3%95/">
-                                <span class="chip bg-color">算法</span>
+                            <a href="/tags/matery/">
+                                <span class="chip bg-color">matery</span>
                             </a>
                         
                     </div>
@@ -487,7 +479,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-28
+                    2021-10-08
                 </div>
                 
 
@@ -501,14 +493,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    82
+                    436
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -523,16 +515,52 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre class=" language-bash"><code class="language-bash">$<span class="token string">"linux相关知识"</span>
-参考地址：https://houbb.github.io/2021/09/09/cs-notes
-本文仅供自己学习使用。
+                <p><a target="_blank" rel="noopener" href="https://nekodeng.oschina.io/posts/waterfall-flow-photo-album.html#toc-heading-1">本文参考博客Neko</a></p>
+<p>ps：亲测该博客中所写均正确，但是有些遗漏在此补充并在此感谢该博主。</p>
+<h2 id="baguetteBox插件下载及配置"><a href="#baguetteBox插件下载及配置" class="headerlink" title="baguetteBox插件下载及配置"></a>baguetteBox插件下载及配置</h2><p>博客中使用了baguetteBox插件，特此放上链接<br><a target="_blank" rel="noopener" href="https://hehung-blog-respurces.oss-cn-beijing.aliyuncs.com/add_album_paper/MyGallery.zip">baguetteBox插件下载链接</a><br>插件放置路径：\hexo-theme-matery\source\libs\MyGallery ，将解压后的两个文件夹放入该文件夹下(需要新建MyGallery)。</p>
+<h2 id="修改主题下-config-yml文件"><a href="#修改主题下-config-yml文件" class="headerlink" title="修改主题下_config.yml文件"></a>修改主题下_config.yml文件</h2><pre class=" language-bash"><code class="language-bash">libs:
+  css:
+    matery: /css/matery.css
+    mycss: /css/my.css
+    fontAwesome: /libs/awesome/css/all.css <span class="token comment" spellcheck="true"># V5.11.1</span>
+    materialize: /libs/materialize/materialize.min.css <span class="token comment" spellcheck="true"># 1.0.0</span>
+    aos: /libs/aos/aos.css
+    animate: /libs/animate/animate.min.css <span class="token comment" spellcheck="true"># V3.5.1</span>
+    lightgallery: /libs/lightGallery/css/lightgallery.min.css <span class="token comment" spellcheck="true"># V1.6.11</span>
+    aplayer: /libs/aplayer/APlayer.min.css
+    dplayer: /libs/dplayer/DPlayer.min.css
+    gitalk: /libs/gitalk/gitalk.css
+    jqcloud: /libs/jqcloud/jqcloud.css
+    tocbot: /libs/tocbot/tocbot.css
+    prism: /libs/prism/prism.css
+    baguetteBoxCss: /libs/MyGallery/css/baguetteBox.css  <span class="token comment" spellcheck="true">#相册展示页面css</span>
+  js:
+    matery: /js/matery.js
+    jquery: /libs/jquery/jquery.min.js
+    materialize: /libs/materialize/materialize.min.js <span class="token comment" spellcheck="true"># 1.0.0</span>
+    masonry: /libs/masonry/masonry.pkgd.min.js <span class="token comment" spellcheck="true"># v4.0.0</span>
+    aos: /libs/aos/aos.js
+    scrollProgress: /libs/scrollprogress/scrollProgress.min.js
+    lightgallery: /libs/lightGallery/js/lightgallery-all.min.js <span class="token comment" spellcheck="true"># V1.6.11</span>
+    clicklove: /libs/others/clicklove.js
+    busuanzi: /libs/others/busuanzi.pure.mini.js
+    aplayer: /libs/aplayer/APlayer.min.js
+    dplayer: /libs/dplayer/DPlayer.min.js
+    crypto: /libs/cryptojs/crypto-js.min.js
+    echarts: /libs/echarts/echarts.min.js
+    gitalk: /libs/gitalk/gitalk.min.js
+    valine: /libs/valine/Valine.min.js <span class="token comment" spellcheck="true"># 若想保持最新版，请替换为 https://unpkg.com/valine/dist/Valine.min.js  默认为 /libs/valine/Valine.min.js</span>
+    minivaline: /libs/minivaline/MiniValine.js
+    jqcloud: /libs/jqcloud/jqcloud-1.0.4.min.js
+    tocbot: /libs/tocbot/tocbot.min.js
+    canvas_nest: /libs/background/canvas-nest.js
+    ribbon: /libs/background/ribbon.min.js
+    ribbonRefresh: /libs/background/ribbon-refresh.min.js
+    ribbon_dynamic: /libs/background/ribbon-dynamic.js
+    instantpage: /libs/instantpage/instantpage.js
+    baguetteBoxJs: /libs/MyGallery/js/baguetteBox.js  <span class="token comment" spellcheck="true"># 相册页面js </span>
 </code></pre>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://github.com/daocaisheng/cyf">计算机、编程等相关知识</a></p>
-</blockquote>
-<h2 id="linux"><a href="#linux" class="headerlink" title=":linux"></a>:linux</h2><h3 id="pencil2-算法"><a href="#pencil2-算法" class="headerlink" title=":pencil2: 算法"></a>:pencil2: 算法</h3><blockquote>
-<p><a target="_blank" rel="noopener" href="https://github.com/daocaisheng/cyf/blob/master/CS-Notes/notes/%E5%89%91%E6%8C%87%20Offer%20%E9%A2%98%E8%A7%A3%20-%20%E7%9B%AE%E5%BD%95.md">剑指 Offer 题解</a><br><a target="_blank" rel="noopener" href="https://github.com/daocaisheng/cyf/blob/master/CS-Notes/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E7%9B%AE%E5%BD%95.md">Leetcode 题解</a><br><a target="_blank" rel="noopener" href="https://github.com/daocaisheng/cyf/blob/master/CS-Notes/notes/%E7%AE%97%E6%B3%95%20-%20%E7%9B%AE%E5%BD%95.md">算法</a></p>
-</blockquote>
+<p>ps: js和css最后一行是添加内容</p>
 <p><br/>结束</br></p>
 <pre class=" language-bash"><code class="language-bash">万事无如退步人，孤云野鹤自由身；
 松风十里时来往，笑揖峰头月一轮。
@@ -563,7 +591,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://daocaisheng.github.io/2021/09/28/linux/">https://daocaisheng.github.io/2021/09/28/linux/</a>
+                    <a href="https://daocaisheng.github.io/2021/10/08/guan-yu-gei-hexo-bo-ke-zeng-jia-xiang-ce-ye-mian-shi-xian-pu-bu-liu-xiang-ce-shi-xian-jia-mi-xiang-ce/">https://daocaisheng.github.io/2021/10/08/guan-yu-gei-hexo-bo-ke-zeng-jia-xiang-ce-ye-mian-shi-xian-pu-bu-liu-xiang-ce-shi-xian-jia-mi-xiang-ce/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -601,16 +629,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/linux/">
-                                    <span class="chip bg-color">linux</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
-                                    <span class="chip bg-color">操作系统</span>
-                                </a>
-                            
-                                <a href="/tags/%E7%AE%97%E6%B3%95/">
-                                    <span class="chip bg-color">算法</span>
+                                <a href="/tags/matery/">
+                                    <span class="chip bg-color">matery</span>
                                 </a>
                             
                         </div>
@@ -780,28 +800,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/10/07/hexo-matery-configure/">
+                <a href="/2021/10/08/guan-yu-gei-hexo-bo-ke-zeng-jia-xiang-ce-ye-mian-shi-xian-pu-bu-liu-xiang-ce-shi-xian-jia-mi-xiang-ce/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="hexo_matery_configure 记录">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="关于给hexo博客增加相册页面（实现瀑布流相册，实现加密相册）">
                         
-                        <span class="card-title">hexo_matery_configure 记录</span>
+                        <span class="card-title">关于给hexo博客增加相册页面（实现瀑布流相册，实现加密相册）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            matery 主题各种配置记录
+                            本文是关于给自己的博客网站添加一个相册页面，并且实现瀑布流相册效果，基于matery主题，其他主题亦可参考。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -814,6 +835,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -832,23 +854,23 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/27/hello-world/">
+                <a href="/2021/10/07/test-blog/">
                     <div class="card-image">
                         
-                        <img src="/medias/banner/6.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="test_blog">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">test_blog</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            计算机操作系统、计算机网络、算法等记录
+                            这是一个测试博客
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-07
                             </span>
                         <span class="publish-author">
                             
@@ -865,16 +887,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/linux/">
-                        <span class="chip bg-color">linux</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
-                        <span class="chip bg-color">操作系统</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
+                    <a href="/tags/none/">
+                        <span class="chip bg-color">none</span>
                     </a>
                     
                 </div>
