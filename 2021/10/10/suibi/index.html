@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo_matery_configure 记录, 十八画生">
+    <meta name="keywords" content="你若安好便是晴天, 十八画生">
     <meta name="description" content="读书、理解、思考，从生活、历史多角度反复印证，直到“道“融入血液，做到本该如此做。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hexo_matery_configure 记录 | 十八画生</title>
+    <title>你若安好便是晴天 | 十八画生</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -378,12 +378,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo_matery_configure 记录</h1>
+                    <h1 class="description center-align post-title">你若安好便是晴天</h1>
                 </div>
             </div>
         </div>
@@ -499,8 +499,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/matery/">
-                                <span class="chip bg-color">matery</span>
+                            <a href="/tags/essay/">
+                                <span class="chip bg-color">essay</span>
                             </a>
                         
                     </div>
@@ -511,8 +511,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                关于hexo博客
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
+                                随笔
                             </a>
                         
                     </div>
@@ -524,21 +524,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-07
+                    2021-10-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-08
+                    2021-10-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    228
+                    44
                 </div>
                 
 
@@ -560,40 +560,13 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1、新增menu-》Gallery显示中文"><a href="#1、新增menu-》Gallery显示中文" class="headerlink" title="1、新增menu-》Gallery显示中文"></a>1、新增menu-》Gallery显示中文</h2><pre class=" language-bash"><code class="language-bash">1、站点文件_config.yml中menu下增加
-  Gallery:
-    url: /gallery
-2、主题下面的languages文件夹-》zh-CN.yml文件中增加 
-  gallery: 相册
-3、文件./layout/_partial/navigation.ejs中增加 
-  menuMap.set<span class="token punctuation">(</span><span class="token string">"Gallery"</span>, <span class="token string">"相册"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<h2 id="2、配置hexo-new-xxx-时默认产生的头部信息"><a href="#2、配置hexo-new-xxx-时默认产生的头部信息" class="headerlink" title="2、配置hexo new xxx 时默认产生的头部信息"></a>2、配置hexo new xxx 时默认产生的头部信息</h2><pre class=" language-bash"><code class="language-bash">1、站点文件 ./scaffolds/post.md 中添加相关配置
----
-<span class="token punctuation">..</span>.
-author: cyf
-tags:
-categories:
-summary:
-password: f242ac52b603121f3d86906819b519a64567864b296797cf15f3a1342c1e8717
-img: img: /medias/featureimages/1.jpg
----
-</code></pre>
-<h2 id="3、-安装文章字数统计插件"><a href="#3、-安装文章字数统计插件" class="headerlink" title="3、 安装文章字数统计插件"></a>3、 安装文章字数统计插件</h2><h3 id="3-1、安装命令如下"><a href="#3-1、安装命令如下" class="headerlink" title="3.1、安装命令如下"></a>3.1、安装命令如下</h3><pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> i --save hexo-wordcount
-</code></pre>
-<h3 id="3-2、在主题下的-config-yml-文件中将各个文章字数相关的配置激活"><a href="#3-2、在主题下的-config-yml-文件中将各个文章字数相关的配置激活" class="headerlink" title="3.2、在主题下的 _config.yml 文件中将各个文章字数相关的配置激活"></a>3.2、在主题下的 <code>_config.yml</code> 文件中将各个文章字数相关的配置激活</h3><pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">postInfo</span><span class="token punctuation">:</span>
-  <span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 发布日期</span>
-  <span class="token key atrule">update</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 更新日期</span>
-  <span class="token key atrule">wordCount</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 文章字数统计</span>
-  <span class="token key atrule">totalCount</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment" spellcheck="true"># 站点总文章字数</span>
-  <span class="token key atrule">min2read</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 文章阅读时长</span>
-  <span class="token key atrule">readCount</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment" spellcheck="true"># 文章阅读次数</span>
-</code></pre>
-<p><br/>结束</br></p>
-<pre class=" language-bash"><code class="language-bash">万事无如退步人，孤云野鹤自由身；
-松风十里时来往，笑揖峰头月一轮。
-</code></pre>
-
+                <div class="ipage">
+    <div class="ititle">节选自《你若安好便是晴天》- 前言</div>
+  <div class="izhengwen">
+    <p>几场梅雨，几卷荷风，江南已是烟水迷离。小院里湿润的青苔在雨中纯净生长。
+    </p>
+  </div>
+</div>
                 
             </div>
             <hr/>
@@ -619,7 +592,7 @@ img: img: /medias/featureimages/1.jpg
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://daocaisheng.github.io/2021/10/07/hexo-matery-configure/">https://daocaisheng.github.io/2021/10/07/hexo-matery-configure/</a>
+                    <a href="https://daocaisheng.github.io/2021/10/10/suibi/">https://daocaisheng.github.io/2021/10/10/suibi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -657,8 +630,8 @@ img: img: /medias/featureimages/1.jpg
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/matery/">
-                                    <span class="chip bg-color">matery</span>
+                                <a href="/tags/essay/">
+                                    <span class="chip bg-color">essay</span>
                                 </a>
                             
                         </div>
@@ -828,45 +801,48 @@ img: img: /medias/featureimages/1.jpg
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/10/07/test-blog/">
+                <a href="/2021/10/10/suibi/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="test_blog">
                         
-                        <span class="card-title">test_blog</span>
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="你若安好便是晴天">
+                        
+                        <span class="card-title">你若安好便是晴天</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这是一个测试博客
+                            你若安好便是晴天
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                    关于hexo博客
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
+                                    随笔
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/none/">
-                        <span class="chip bg-color">none</span>
+                    <a href="/tags/essay/">
+                        <span class="chip bg-color">essay</span>
                     </a>
                     
                 </div>
@@ -880,23 +856,23 @@ img: img: /medias/featureimages/1.jpg
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/28/linux/">
+                <a href="/2021/10/10/guan-yu-gei-hexo-bo-ke-zeng-jia-yin-le-ye-mian-shi-yong-aplayer-he-metingjs-cha-jian/">
                     <div class="card-image">
                         
-                        <img src="/medias/banner/0.jpg" class="responsive-img" alt="技术面试必备基础知识、Leetcode、计算机操作系统、计算机网络、系统设计">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="关于给hexo博客增加音乐页面（使用Aplayer和MetingJS插件）">
                         
-                        <span class="card-title">技术面试必备基础知识、Leetcode、计算机操作系统、计算机网络、系统设计</span>
+                        <span class="card-title">关于给hexo博客增加音乐页面（使用Aplayer和MetingJS插件）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            计算机操作系统、计算机网络、算法等记录
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-10
                             </span>
                         <span class="publish-author">
                             
@@ -913,16 +889,12 @@ img: img: /medias/featureimages/1.jpg
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/linux/">
-                        <span class="chip bg-color">linux</span>
+                    <a href="/tags/matery/">
+                        <span class="chip bg-color">matery</span>
                     </a>
                     
-                    <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
-                        <span class="chip bg-color">操作系统</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
+                    <a href="/tags/music/">
+                        <span class="chip bg-color">music</span>
                     </a>
                     
                 </div>
