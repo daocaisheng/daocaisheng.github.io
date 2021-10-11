@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="test_blog, 十八画生">
+    <meta name="keywords" content="关于给hexo文章分类页面按钮仿书本样式美化, 十八画生">
     <meta name="description" content="读书、理解、思考，从生活、历史多角度反复印证，直到“道“融入血液，做到本该如此做。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>test_blog | 十八画生</title>
+    <title>关于给hexo文章分类页面按钮仿书本样式美化 | 十八画生</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -378,12 +378,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">test_blog</h1>
+                    <h1 class="description center-align post-title">关于给hexo文章分类页面按钮仿书本样式美化</h1>
                 </div>
             </div>
         </div>
@@ -499,8 +499,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/none/">
-                                <span class="chip bg-color">none</span>
+                            <a href="/tags/matery/">
+                                <span class="chip bg-color">matery</span>
                             </a>
                         
                     </div>
@@ -524,28 +524,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-07
+                    2021-10-11
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-08
+                    2021-10-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    58
+                    634
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -560,18 +560,144 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre class=" language-yaml"><code class="language-yaml"><span class="token punctuation">---</span>
-<span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token number">404</span>
-<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2018-09-30 17:25:30</span>
-<span class="token key atrule">type</span><span class="token punctuation">:</span> <span class="token string">"404"</span>
-<span class="token key atrule">layout</span><span class="token punctuation">:</span> <span class="token string">"404"</span>
-<span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">"Oops～，我崩溃了！找不到你想要的页面 :("</span>
-<span class="token punctuation">---</span>
+                <p><a target="_blank" rel="noopener" href="https://nekodeng.oschina.io/posts/blog-categories-bookstyle.html">本文参考博客Neko</a></p>
+<!--<audio src="http://music.163.com/song?id=258083&userid=118241018" controls="" preload="metadata"></audio> -->
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=258083&auto=1&height=66"></iframe>
+
+<div style="position: relative; padding: 30% 45%;"> <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="//player.bilibili.com/player.html?aid=3247415&bvid=BV1Ys411d7bq&cid=5124803&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> </div>
+
+<h2 id="引入html代码"><a href="#引入html代码" class="headerlink" title="引入html代码"></a>引入html代码</h2><p>1、首先，找到位置为/layout/category-cloud.ejs的文件，后面的html和css代码都放在此category-cloud.ejs文件即可。<br>2、然后，定位到href=”&lt;%- url_for(category.path) %&gt;”的a标签位置：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span><span class="token operator">!</span>-- 定位到该位置 --<span class="token operator">></span> 
+<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"&lt;%- url_for(category.path) %>"</span> title<span class="token operator">=</span><span class="token string">"&lt;%- category.name %>: &lt;%- category.length %>"</span><span class="token operator">></span>
 </code></pre>
-<p><br/>结束</br></p>
-<pre class=" language-bash"><code class="language-bash">万事无如退步人，孤云野鹤自由身；
-松风十里时来往，笑揖峰头月一轮。
+<p>3、直接将该a标签里面的内容全部替换为以下代码：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span>div class<span class="token operator">=</span><span class="token string">"moleskine-wrapper"</span><span class="token operator">></span> 
+    <span class="token operator">&lt;</span>div class<span class="token operator">=</span><span class="token string">"moleskine-notebook"</span><span class="token operator">></span> 
+        <span class="token operator">&lt;</span>div class<span class="token operator">=</span><span class="token string">"chip notebook-cover center-align waves-effect waves-light 
+        &lt;% if (isCategory &amp;&amp; category.name == page.category) &amp;#123; %> chip-active &lt;% &amp;#125; else &amp;#123; %> chip-default &lt;% &amp;#125; %>"</span> 
+                style<span class="token operator">=</span><span class="token string">"background-color: &lt;%- color %>;"</span><span class="token operator">></span> 
+            <span class="token operator">&lt;</span>div class<span class="token operator">=</span><span class="token string">"notebook-skin 
+                &lt;% if (isCategory &amp;&amp; category.name == page.category) &amp;#123; %> chip-active &lt;% &amp;#125; else &amp;#123; %> chip-default &lt;% &amp;#125; %>"</span> <span class="token operator">></span>
+                <span class="token operator">&lt;</span>%- category.name %<span class="token operator">></span> 
+            <span class="token operator">&lt;</span>/div<span class="token operator">></span> 
+        <span class="token operator">&lt;</span>/div<span class="token operator">></span> 
+        <span class="token operator">&lt;</span>div class<span class="token operator">=</span><span class="token string">"notebook-page dotted"</span><span class="token operator">></span><span class="token operator">&lt;</span>/div<span class="token operator">></span> 
+    <span class="token operator">&lt;</span>/div<span class="token operator">></span> 
+<span class="token operator">&lt;</span>/div<span class="token operator">></span>
 </code></pre>
+<h2 id="设置css样式"><a href="#设置css样式" class="headerlink" title="设置css样式"></a>设置css样式</h2><p>这部分同样放在此category-cloud.ejs文件即可。</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span>style<span class="token operator">></span>
+/* 文章分类书本样式 */
+.chip-container .tag-chips <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    display: flex<span class="token punctuation">;</span>
+    flex-wrap: wrap<span class="token punctuation">;</span>
+    justify-content: space-around<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+.chip-container .tag-chips a <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    margin: 0 7px 10px<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+.chip-container .chip <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    max-width: calc<span class="token punctuation">(</span>100% / 4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    min-width: 10em<span class="token punctuation">;</span>
+    height: 200px<span class="token punctuation">;</span>
+    position: relative<span class="token punctuation">;</span>
+    transition: .5s linear<span class="token punctuation">;</span>
+    padding: 19px 0<span class="token punctuation">;</span>
+    line-height: 20px<span class="token punctuation">;</span>
+    z-index: 990<span class="token punctuation">;</span>
+    border-radius: 5px 15px 15px 5px<span class="token punctuation">;</span>
+    transform-origin: left center 0<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+.chip-container .notebook-cover::before <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    content: <span class="token string">""</span><span class="token punctuation">;</span>
+    position: absolute<span class="token punctuation">;</span>
+    width: 10px<span class="token punctuation">;</span>
+    height: calc<span class="token punctuation">(</span>100% + 2px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    top: -1px<span class="token punctuation">;</span>
+    z-index: 100<span class="token punctuation">;</span>
+    border-radius: 2px<span class="token punctuation">;</span>
+    right: 25px<span class="token punctuation">;</span>
+    transition: 2s ease<span class="token punctuation">;</span>
+    /* background: linear-gradient<span class="token punctuation">(</span>to right,<span class="token comment" spellcheck="true">#9c2e2b 0,#cc4b48 12%,#9c2e2b 25%,#cc4b48 37%,#9c2e2b 50%,#cc4b48 62%,#9c2e2b 75%,#cc4b48 87%,#9c2e2b 100%); */</span>
+    background: linear-gradient<span class="token punctuation">(</span>to right,<span class="token comment" spellcheck="true">#1e606e 0,#2e95aa 12%,#1e606e 25%,#2e95aa 37%,#1e606e 50%,#2e95aa 62%,#1e606e 75%,#2e95aa 87%,#1e606e 100%);</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+
+.chip .notebook-skin <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    height: 50px<span class="token punctuation">;</span>
+    width: 100%<span class="token punctuation">;</span>
+    background: <span class="token comment" spellcheck="true">#e8e8e0;</span>
+    margin-top: 42px<span class="token punctuation">;</span>
+    padding: 10px 32px 64px 10px<span class="token punctuation">;</span>
+    font-size: 19px<span class="token punctuation">;</span>
+    position: relative<span class="token punctuation">;</span>
+    z-index: 10<span class="token punctuation">;</span>
+    color: <span class="token comment" spellcheck="true">#222;</span>
+    text-align: left<span class="token punctuation">;</span>
+    box-shadow: 0 1px 1px rgba<span class="token punctuation">(</span>0,0,0,.2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+.chip .notebook-skin:before <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    content: <span class="token string">''</span><span class="token punctuation">;</span>
+    position: absolute<span class="token punctuation">;</span>
+    width: 100%<span class="token punctuation">;</span>
+    height: 15px<span class="token punctuation">;</span>
+    left: 0<span class="token punctuation">;</span>
+    bottom: 0<span class="token punctuation">;</span>
+    background: <span class="token comment" spellcheck="true">#cddc39;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+.notebook-cover <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    background: <span class="token comment" spellcheck="true">#cc4b48;</span>
+    height: 200px<span class="token punctuation">;</span>
+    width: 140px<span class="token punctuation">;</span>
+    position: absolute<span class="token punctuation">;</span>
+    border-radius: 5px 15px 15px 5px<span class="token punctuation">;</span>
+    z-index: 10<span class="token punctuation">;</span>
+    transition: .5s linear<span class="token punctuation">;</span>
+    transform-style: preserve-3d<span class="token punctuation">;</span>
+    transform-origin: left center 0<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+
+.moleskine-wrapper <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    max-width: calc<span class="token punctuation">(</span>100% / 4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    min-width: 10em<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+.moleskine-notebook:hover .notebook-cover <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    transform: rotateY<span class="token punctuation">(</span>-50deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    z-index: 99<span class="token punctuation">;</span>
+    box-shadow: 20px 10px 50px rgba<span class="token punctuation">(</span>0,0,0,.2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+.moleskine-notebook <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    height: 200px<span class="token punctuation">;</span>
+    position: relative<span class="token punctuation">;</span>
+    display: flex<span class="token punctuation">;</span>
+    flex-wrap: wrap<span class="token punctuation">;</span>
+    justify-content: space-around<span class="token punctuation">;</span>
+    transition: .5s linear<span class="token punctuation">;</span>
+    border-radius: 5px 15px 15px 5px<span class="token punctuation">;</span>
+    transform-origin: left center 0<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+.moleskine-notebook:hover <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    transform: rotateZ<span class="token punctuation">(</span>-10deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+.notebook-page.dotted <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    background: linear-gradient<span class="token punctuation">(</span>to bottom,<span class="token comment" spellcheck="true">#fbfae8 9px,#e4e4e4 1px);</span>
+    background-size: 100% 10px<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+.chip-container .chip:hover <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    background: none<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+.notebook-page <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    height: 100%<span class="token punctuation">;</span>
+    width: 140px<span class="token punctuation">;</span>
+    position: absolute<span class="token punctuation">;</span>
+    top: 10px<span class="token punctuation">;</span>
+    background-color: <span class="token comment" spellcheck="true">#fbfae8;</span>
+    z-index: 0<span class="token punctuation">;</span>
+    border-radius: 5px 16px 16px 5px<span class="token punctuation">;</span>
+    overflow: hidden<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+<span class="token operator">&lt;</span>/style<span class="token operator">></span>
+</code></pre>
+<p>至此，结束。很简单，但超好看。</p>
 
                 
             </div>
@@ -598,7 +724,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://daocaisheng.github.io/2021/10/07/test-blog/">https://daocaisheng.github.io/2021/10/07/test-blog/</a>
+                    <a href="https://daocaisheng.github.io/2021/10/11/guan-yu-gei-hexo-wen-zhang-fen-lei-ye-mian-an-niu-fang-shu-ben-yang-shi-mei-hua/">https://daocaisheng.github.io/2021/10/11/guan-yu-gei-hexo-wen-zhang-fen-lei-ye-mian-an-niu-fang-shu-ben-yang-shi-mei-hua/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -636,8 +762,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/none/">
-                                    <span class="chip bg-color">none</span>
+                                <a href="/tags/matery/">
+                                    <span class="chip bg-color">matery</span>
                                 </a>
                             
                         </div>
@@ -807,28 +933,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/10/08/guan-yu-gei-hexo-bo-ke-zeng-jia-xiang-ce-ye-mian-shi-xian-pu-bu-liu-xiang-ce-shi-xian-jia-mi-xiang-ce/">
+                <a href="/2021/10/11/guan-yu-gei-hexo-wen-zhang-fen-lei-ye-mian-an-niu-fang-shu-ben-yang-shi-mei-hua/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="关于给hexo博客增加相册页面（实现瀑布流相册，实现加密相册）">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="关于给hexo文章分类页面按钮仿书本样式美化">
                         
-                        <span class="card-title">关于给hexo博客增加相册页面（实现瀑布流相册，实现加密相册）</span>
+                        <span class="card-title">关于给hexo文章分类页面按钮仿书本样式美化</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本文是关于给自己的博客网站添加一个相册页面，并且实现瀑布流相册效果，基于matery主题，其他主题亦可参考。
+                            最近成迷于美化hexo博客样式，发现了这个超好看的样式，美化了一下，基于matery主题设置的，其他主题原理也一样可参考。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -841,6 +968,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -859,30 +987,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/10/07/hexo-matery-configure/">
+                <a href="/2021/10/10/suibi/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="hexo_matery_configure 记录">
                         
-                        <span class="card-title">hexo_matery_configure 记录</span>
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="你若安好便是晴天">
+                        
+                        <span class="card-title">你若安好便是晴天</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            matery 主题各种配置记录
+                            你若安好便是晴天
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-10
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                    关于hexo博客
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
+                                    随笔
                                 </a>
                             
                             
@@ -892,8 +1021,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/matery/">
-                        <span class="chip bg-color">matery</span>
+                    <a href="/tags/essay/">
+                        <span class="chip bg-color">essay</span>
                     </a>
                     
                 </div>
